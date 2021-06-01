@@ -22,7 +22,9 @@ class Timer extends Component {
       </section>
     );
   }
-
+  componentWillUnmount() {
+  clearInterval(this.interval)
+    }
   //clock functions
   clockTick = () => {
     this.setState(prevState => ({
